@@ -1,0 +1,140 @@
+{
+  "revision_id": "0a40473ddc6cd0b310c22adab09768957b023e09dd2db458cdcf111b58e490c7",
+  "name": "company_web",
+  "run_list": [
+    "recipe[mychef_client::default]",
+    "recipe[company_web::default]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "apache": {
+      "version": "0.2.1",
+      "identifier": "f4b2a3086c1968f63f1ec5154f94fc27fd34ec66",
+      "dotted_decimal_identifier": "68876307608115560.69312245658898324.277248682028134",
+      "source": "../cookbooks/apache",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": null,
+        "revision": null,
+        "working_tree_clean": true,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "../cookbooks/apache"
+      }
+    },
+    "company_web": {
+      "version": "0.1.0",
+      "identifier": "61e99999c33e62190bac63d7b08a617e3fa7deee",
+      "dotted_decimal_identifier": "27559918659911266.7049709455126666.107194861739758",
+      "source": "../cookbooks/company_web",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": null,
+        "revision": null,
+        "working_tree_clean": true,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "../cookbooks/company_web"
+      }
+    },
+    "mychef_client": {
+      "version": "0.1.0",
+      "identifier": "5215b8fc6b490f84d560ace19fd922a99fc79370",
+      "dotted_decimal_identifier": "23104832343329039.37389308119850969.38111925474160",
+      "source": "../cookbooks/mychef_client",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": null,
+        "revision": null,
+        "working_tree_clean": true,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "../cookbooks/mychef_client"
+      }
+    },
+    "myiis": {
+      "version": "0.2.1",
+      "identifier": "cd0784440dddcbcd7aa3187cc0d16bed4aec5c40",
+      "dotted_decimal_identifier": "57710634884521419.57837211134771409.118666908425280",
+      "source": "../cookbooks/myiis",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": null,
+        "revision": null,
+        "working_tree_clean": true,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "../cookbooks/myiis"
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "apache",
+        ">= 0.0.0"
+      ],
+      [
+        "company_web",
+        ">= 0.0.0"
+      ],
+      [
+        "mychef_client",
+        ">= 0.0.0"
+      ],
+      [
+        "myiis",
+        ">= 0.0.0"
+      ]
+    ],
+    "dependencies": {
+      "apache (0.2.1)": [
+
+      ],
+      "company_web (0.1.0)": [
+        [
+          "myiis",
+          ">= 0.0.0"
+        ],
+        [
+          "apache",
+          ">= 0.0.0"
+        ]
+      ],
+      "mychef_client (0.1.0)": [
+
+      ],
+      "myiis (0.2.1)": [
+
+      ]
+    }
+  }
+}
